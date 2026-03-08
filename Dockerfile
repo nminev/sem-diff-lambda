@@ -8,7 +8,7 @@ RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 ENV PATH="/root/.cargo/bin:$PATH"
 
 # Clone and build sem
-RUN git clone https://github.com/Ataraxy-Labs/sem /sem
+RUN git clone https://github.com/nminev/sem /sem
 WORKDIR /sem/crates
 RUN cargo build --release -p sem-cli
 
